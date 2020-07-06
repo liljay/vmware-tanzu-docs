@@ -20,5 +20,31 @@ Bootstrap 환경은 관리 클러스터를 생성 하기 위한 환경이며 Boo
 10. 태그 추가 단계 중 키가 Name이고 값이 jumpbox인 태그 추가
 11. 보안 그룹 생성(jumpbox) 및 인바운드 내 아이피에 대한 SSH 허용 규칙 추가
 12. 검토 단계에서 설정 확인 후 인스턴스 시작
+### Docker 설치
+#### 필요 도구 설치 및 저장소 설정 
+```
+sudo apt-get update -y
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -    
+```
+#### apt-key fingerprint 확인
+```
+sudo apt-key fingerprint 0EBFCD88
+```
+##### 아래와 같이 출력 되면 정상
+```
+$ sudo apt-get fingerprint 0EBFCD88
+
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+sub   rsa4096 2017-02-22 [S]
+```
+
 
 
