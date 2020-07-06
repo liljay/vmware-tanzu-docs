@@ -21,7 +21,7 @@ Bootstrap 환경은 관리 클러스터를 생성 하기 위한 환경이며 Boo
 11. 보안 그룹 생성(jumpbox) 및 인바운드 내 아이피에 대한 SSH 허용 규칙 추가
 12. 검토 단계에서 설정 확인 후 인스턴스 시작
 ### Docker 설치
-#### 필요 도구 설치 및 저장소 설정 
+#### 필요 도구 설치 및 Docker Repository 설정 
 ```
 sudo apt-get update -y
 sudo apt-get install \
@@ -32,7 +32,7 @@ sudo apt-get install \
     software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -    
 ```
-#### apt-key fingerprint 확인
+#### Repository apt-key fingerprint 확인
 ```
 sudo apt-key fingerprint 0EBFCD88
 ```
@@ -46,5 +46,17 @@ uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
 sub   rsa4096 2017-02-22 [S]
 ```
 
+#### Docker Repository 추가
+```
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+#### Docker 설치
+```
+ $ sudo apt-get update
+ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
 
 
