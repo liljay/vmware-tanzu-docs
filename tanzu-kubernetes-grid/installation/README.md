@@ -2,6 +2,7 @@
 # VMware Tanzu Kubernetes Grid on AWS 설치 가이드
 ## Bootstrap 환경 준비
 Bootstrap 환경은 관리 클러스터를 생성 하기 위한 환경이며 Bootstrap 환경 및 Bootstrap 환경 내 아래의 도구들의 설치가 필요합니다.
+- AWS IAM 계정 (Administrator 권한)
 - Ubuntu 16.04 LTS VM 준비
 - Docker 설치 
 - kubectl 설치
@@ -86,6 +87,16 @@ mv ./tkg-linux-amd64-v1.1.0-vmware.1 tkg
 chmod +x ./tkg
 sudo mv ./tkg /usr/local/bin/tkg
 tkg version
+```
+### clusterawsadmin 설치
+1. https://www.vmware.com/go/get-tkg 접속
+2. Select Version 1.1 확인 및 GO TO DOWNLOADS 클릭
+3. ClusterAdmin AWS v0.5.3 Linux 다운로드
+4. 다운로드한 바이너리 압축 해제 및 이동
+```
+export AWS_ACCESS_KEY_ID=aws_access_key
+export AWS_SECRET_ACCESS_KEY=aws_access_key_secret
+export AWS_REGION=ap-northeast-2
 ```
 
 
