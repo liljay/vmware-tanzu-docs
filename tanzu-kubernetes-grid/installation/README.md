@@ -6,6 +6,9 @@ Bootstrap 환경은 관리 클러스터를 생성 하기 위한 환경이며 Boo
 - Docker 설치 
 - kubectl 설치
 - Tanzu Kubernetes Grid CLI 설치
+- clusterawsadm
+- aws cli
+
 
 ### Ubuntu 16.04 LTS VM 준비
 1. Amazon Web Services 웹 콘솔 접속 (https://console.aws.amazon.com) 및 로그인
