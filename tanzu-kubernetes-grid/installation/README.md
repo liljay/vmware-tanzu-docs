@@ -53,10 +53,22 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 ```
-#### Docker 설치
+#### Docker 패키지 설치
 ```
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
+### kubectl 설치
+```
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+```
+#### kubectl 설치 확인
+```
+kubectl version --client
+```
+
+
 
 
