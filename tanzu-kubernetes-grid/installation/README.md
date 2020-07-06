@@ -33,7 +33,9 @@ sudo apt-get install \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common
+    software-properties-common \
+    jq \
+    awscli
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -    
 ```
 #### Repository apt-key fingerprint 확인
