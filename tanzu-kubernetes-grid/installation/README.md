@@ -99,5 +99,27 @@ mv clusterawsadm-linux-amd64-v0.5.3-vmware.1 clusterawsadm
 chmod +x clusterawsadm
 sudo mv clusterawsadm /usr/local/bin
 ```
+### clusterawsadmin 도구를 위한 AWS Credential 지정
+```
+export AWS_ACCESS_KEY_ID=aws_access_key
+export AWS_SECRET_ACCESS_KEY=aws_access_key_secret
+export AWS_REGION=us-west-2
+```
+### CloudFormation Stack 생성
+```
+clusterawsadm alpha bootstrap create-stack
+```
+### AWS Keypair 생성
+```
+aws ec2 create-key-pair --key-name default --output json | jq .KeyMaterial -r > default.pem
+```
+
+### Cluster API
+```
+export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io --output json)
+export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
+export AWS_SECRET_ACCESS_KEY=$(echo $AWS_CREDENTIALS | jq .AccessKey.SecretAccessKey -r)
+export AWS_B64ENCODED_CREDENTIALS=$(clusterawsadm alpha bootstrap encode-aws-credentials)
+```
 
 
