@@ -79,6 +79,7 @@ gunzip tkg-linux-amd64-v1.1.0-vmware.1.gz
 mv ./tkg-linux-amd64-v1.1.0-vmware.1 tkg
 chmod +x ./tkg
 sudo mv ./tkg /usr/local/bin/tkg
+tkg version
 ```
 
 
