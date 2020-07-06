@@ -69,6 +69,11 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 
+### Tanzu Kubernetes Grid (tkg) CLI 설치
+1. https://www.vmware.com/go/get-tkg 접속
+2. Select Version 1.1 확인 및 GO TO DOWNLOADS 클릭
+3. VMware Tanzu Kubernetes Grid CLI 1.1 Linux 다운로드
+
 
 
 
