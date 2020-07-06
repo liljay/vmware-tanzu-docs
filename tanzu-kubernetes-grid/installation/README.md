@@ -73,7 +73,11 @@ kubectl version --client
 1. https://www.vmware.com/go/get-tkg 접속
 2. Select Version 1.1 확인 및 GO TO DOWNLOADS 클릭
 3. VMware Tanzu Kubernetes Grid CLI 1.1 Linux 다운로드
-
-
+4. 다운로드한 바이너리 압축 해제 및 이동
+```
+gunzip tkg-linux-amd64-v1.1.0-vmware.1.gz
+mv ./tkg-linux-amd64-v1.1.0-vmware.1 tkg
+sudo mv ./tkg /usr/local/bin/tkg
+```
 
 
