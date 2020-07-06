@@ -8,6 +8,7 @@ Bootstrap 환경은 관리 클러스터를 생성 하기 위한 환경이며 Boo
 - Tanzu Kubernetes Grid CLI 설치
 - clusterawsadm
 - aws cli
+- jq
 
 
 ### Ubuntu 16.04 LTS VM 준비
