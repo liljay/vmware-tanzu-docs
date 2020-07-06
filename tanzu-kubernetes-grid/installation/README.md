@@ -94,9 +94,14 @@ tkg version
 3. ClusterAdmin AWS v0.5.3 Linux 다운로드
 4. 다운로드한 바이너리 압축 해제 및 이동
 ```
+gunzip clusterawsadm-linux-amd64-v0.5.3-vmware.1.gz
+
 export AWS_ACCESS_KEY_ID=aws_access_key
 export AWS_SECRET_ACCESS_KEY=aws_access_key_secret
 export AWS_REGION=ap-northeast-2
+
+
+
 ```
 
 
