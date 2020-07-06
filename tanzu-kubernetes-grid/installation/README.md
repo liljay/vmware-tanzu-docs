@@ -109,12 +109,12 @@ export AWS_REGION=us-west-2
 ```
 clusterawsadm alpha bootstrap create-stack
 ```
-### AWS Keypair 생성
+### AWS Keypair 생성 (Management Cluster에 사용됨)
 ```
 aws ec2 create-key-pair --key-name default --output json | jq .KeyMaterial -r > default.pem
 ```
 
-### Cluster API
+### Cluster API를 위한 계정 생성
 ```
 export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io --output json)
 export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
